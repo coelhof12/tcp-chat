@@ -72,6 +72,15 @@ Replace ```<host>``` with the server's IP address and <port> with the port numbe
 
 ## 📝 Commands
 
+| Command        | Description                                   |
+|----------------|-----------------------------------------------|
+| `/list`        | Lists all connected clients.                 |
+| `/whisper`     | Sends a private message to another user.     |
+| `/name`        | Changes your username.                       |
+| `/quit`        | Exits the chat.                              |
+| `/help`        | Displays available commands.                 |
+
+
 ## ⚖️ Legal Notice
 
 This project is for educational purposes only. Use responsibly and with proper permissions.
