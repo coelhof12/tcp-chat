@@ -1,6 +1,6 @@
 # 🗨️ Multi-Client TCP Chat Server
 
-![Project Cover](COVER URL)
+![Project Cover](https://raw.githubusercontent.com/coelhof12/tcp-chat/refs/heads/main/assets/Repo_Covers.jpg)
 
 ## 💡 The Concept
 
