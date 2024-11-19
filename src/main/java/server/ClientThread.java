@@ -27,17 +27,15 @@ public class ClientThread extends Thread {
             while (true) {
                 String message = reader.readLine();
                 if (message == null || message.equalsIgnoreCase("/quit")) {
-                    disconnect();
+                    disconnect(); // Handle disconnection here
                     break;
                 }
                 handleCommand(message);
             }
         } catch (IOException e) {
-            System.err.println("Error in client thread: " + e.getMessage());
+            System.err.println("Error in client thread for user " + username + ": " + e.getMessage());
         } finally {
-            if (currentChannel != null) {
-                server.leaveChannel(currentChannel, this);
-            }
+            disconnect(); // Ensure cleanup even in case of an error
         }
     }
 
@@ -66,5 +64,22 @@ public class ClientThread extends Thread {
 
     public String getUsername() {
         return username;
+    }
+
+    /**
+     * Disconnects the client and performs cleanup.
+     */
+    public void disconnect() {
+        try {
+            if (currentChannel != null) {
+                server.leaveChannel(currentChannel, this); // Remove client from the channel
+            }
+            if (socket != null && !socket.isClosed()) {
+                socket.close(); // Close the socket
+            }
+            System.out.println("Client " + username + " disconnected.");
+        } catch (IOException e) {
+            System.err.println("Error while disconnecting client " + username + ": " + e.getMessage());
+        }
     }
 }
