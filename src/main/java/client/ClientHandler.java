@@ -4,6 +4,9 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * Handles client-side communication with the server.
+ */
 public class ClientHandler {
     private final String host;
     private final int port;
@@ -20,6 +23,7 @@ public class ClientHandler {
 
             Scanner scanner = new Scanner(System.in);
 
+            // Start a thread to listen for messages from the server
             new Thread(() -> {
                 try {
                     String serverMessage;
@@ -31,9 +35,11 @@ public class ClientHandler {
                 }
             }).start();
 
+            // Main loop to send user input to the server
             while (true) {
                 String input = scanner.nextLine();
                 writer.println(input);
+
                 if (input.equalsIgnoreCase("/quit")) {
                     System.out.println("Disconnected from the server.");
                     break;
