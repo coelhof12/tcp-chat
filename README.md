@@ -6,6 +6,12 @@
 
 A simple yet powerful multi-client chat server and client application built using Java and TCP sockets. This project demonstrates network programming concepts, concurrency handling, and seamless communication between clients.
 
+## 🎥 TCP Chat Demo
+
+<p align="center"> 
+   <img width="460" height="300" src="https://raw.githubusercontent.com/coelhof12/tcp-chat/refs/heads/main/assets/tcp-chat_demo.gif"> 
+</p>
+
 ## 📖 Introduction
 
 This project was developed to implement a robust chat system where multiple clients can connect to a single server, exchange messages, and interact through various commands. It showcases essential skills in networking, concurrent programming, and software packaging using Maven.
