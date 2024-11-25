@@ -22,7 +22,7 @@ public class ClientHandler {
              PrintWriter writer = new PrintWriter(socket.getOutputStream(), true)) {
 
             Scanner scanner = new Scanner(System.in);
-            
+
             String serverMessage = reader.readLine();
             if (serverMessage != null) {
                 System.out.println(serverMessage);
