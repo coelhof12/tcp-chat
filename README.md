@@ -29,7 +29,7 @@ The goal of this project is to:
 The project is fully implemented with the following features:
 
  - Message Broadcasting: Clients can send messages to everyone in the chat.
- - Command Handling: Commands like /list, /whisper, and /name are supported.
+ - Command Handling: Commands such as /list, /whisper, and /name are supported.
  - Graceful Connection Management: The server and client handle connections and disconnections seamlessly.
 
 Future enhancements:
@@ -42,10 +42,10 @@ Future enhancements:
 
  - Real-Time Communication: Messages are exchanged in real time across all connected clients.
  - Command System: Supports various commands such as:
-    - ```/List```: Lists all the connected users.
-    - ```/Whisper <user> <message>```: Sends a private message to a specific user.
+    - ```/list```: Lists all the connected users.
+    - ```/whisper <user> <message>```: Sends a private message to a specific user.
     - ```/name <new_user>```: Changes the username.
-    - ```/quit```: Disconects the client.
+    - ```/quit```: Disconnects the client.
  - Scalable Connections: Handles multiple clients concurrently using a thread pool.
 
 ## 🛠️ Technologies Used
