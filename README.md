@@ -8,8 +8,8 @@ A simple yet powerful multi-client chat server and client application built usin
 
 ## 🎥 TCP Chat Demo
 
-<p align="center"> 
-   <img width="460" height="300" src="https://raw.githubusercontent.com/coelhof12/tcp-chat/refs/heads/main/assets/tcp-chat_demo.gif"> 
+<p align="left"> 
+   <img width="920" height="600" src="https://raw.githubusercontent.com/coelhof12/tcp-chat/refs/heads/main/assets/tcp-chat_demo.gif"> 
 </p>
 
 ## 📖 Introduction
