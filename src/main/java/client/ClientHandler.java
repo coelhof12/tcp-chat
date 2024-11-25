@@ -22,20 +22,34 @@ public class ClientHandler {
              PrintWriter writer = new PrintWriter(socket.getOutputStream(), true)) {
 
             Scanner scanner = new Scanner(System.in);
+            
+            String serverMessage = reader.readLine();
+            if (serverMessage != null) {
+                System.out.println(serverMessage);
 
-            // Start a thread to listen for messages from the server
+                String username = scanner.nextLine();
+                writer.println(username);
+
+                serverMessage = reader.readLine();
+                if (serverMessage != null) {
+                    System.out.println(serverMessage);
+                }
+            } else {
+                System.err.println("Server disconnected.");
+                return;
+            }
+
             new Thread(() -> {
                 try {
-                    String serverMessage;
-                    while ((serverMessage = reader.readLine()) != null) {
-                        System.out.println(serverMessage);
+                    String message;
+                    while ((message = reader.readLine()) != null) {
+                        System.out.println(message);
                     }
                 } catch (IOException e) {
                     System.err.println("Disconnected from server.");
                 }
             }).start();
 
-            // Main loop to send user input to the server
             while (true) {
                 String input = scanner.nextLine();
                 writer.println(input);
