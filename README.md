@@ -89,4 +89,4 @@ Replace ```<host>``` with the server's IP address and <port> with the port numbe
 
 ## ⚖️ Legal Notice
 
-This project is for educational purposes only. Use responsibly and with proper permissions.
+This project is for educational purposes only. Use responsibly and with proper permissions and responsibly.
